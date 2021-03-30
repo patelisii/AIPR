@@ -65,6 +65,7 @@ class InferenceViewController: UIViewController {
   var threadCountLimit: Int = 0
   private var currentThreadCount: Int = 0
   private var infoTextColor = UIColor.black
+    
 
   // MARK: Delegate
   var delegate: InferenceViewControllerDelegate?
@@ -104,17 +105,54 @@ class InferenceViewController: UIViewController {
         }
         post["item"] = item
         post["confidence"] = confidence
+        let imageName = getImageLabel(item: item)
+        post["image_label"] = imageName
         
         post.saveInBackground()
         {(success, error) in
             if success{
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let resultsVC = main.instantiateViewController(identifier: "ResultsViewController") as! ResultsViewController
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                    let delegate = windowScene.delegate as? SceneDelegate
+                  else {
+                    return
+                  }
+                
+                delegate.window?.rootViewController = resultsVC
+                resultsVC.typeImage.image = UIImage(named: imageName) as! UIImage
+                resultsVC.revealLabel.text = "This is \(item)"
+                resultsVC.disposeLabel.text = "Dispose in the \(item) bin"
                 self.dismiss(animated: true, completion: nil)
+                 
                 print("saved")
             }
             else{
                 print("error: \(error?.localizedDescription)")
             }
         }
+    }
+    
+    func getImageLabel(item: String) -> String{
+        
+//        let plasticLabels = ["water bottle", "water jug"]
+//        let metalLabels = ["beer bottle", "pop bottle"]
+//        let electronicsLabels = ["remote control"]
+//        let glassLabels = ["wine bottle"]
+        
+        if item == "plastic"{
+            return "plastics"
+        }
+        else if item == "metal"{
+            return "metals"
+        }
+        else if item == "miscellaneous plastic"{
+            return "plastics"
+        }
+        else{
+            return item
+        }
+        
     }
     
 }
@@ -276,6 +314,7 @@ extension InferenceViewController: UITableViewDelegate, UITableViewDataSource {
 
     return(fieldName, info)
   }
+    
 }
 
 

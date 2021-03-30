@@ -2,27 +2,35 @@
 //  ResultsViewController.swift
 //  AIPR
 //
-//  Created by Patrick Elisii on 3/2/21.
+//  Created by Patrick Elisii on 3/26/21.
 //
 
 import UIKit
 
 class ResultsViewController: UIViewController {
     
-    var pic = UIImage()
-    @IBOutlet weak var imageFrame: UIImageView!
+    @IBOutlet weak var typeImage: UIImageView!
+    @IBOutlet weak var revealLabel: UILabel!
+    @IBOutlet weak var disposeLabel: UILabel!
     
-    @IBAction func dispose(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageFrame.image = pic
-        
+
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onSubmit(_ sender: Any) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let tabVC = main.instantiateViewController(identifier: "TabViewController")
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let delegate = windowScene.delegate as? SceneDelegate
+          else {
+            return
+          }
+        delegate.window?.rootViewController = tabVC
+    }
+    
     /*
     // MARK: - Navigation
 

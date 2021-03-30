@@ -126,6 +126,8 @@ class PreviewViewController: UIViewController {
   deinit {
     NotificationCenter.default.removeObserver(self)
   }
+    
+    
 
 }
 
@@ -140,6 +142,7 @@ extension PreviewViewController: InferenceViewControllerDelegate {
       threadCount: count
     )
   }
+    
 }
 
 // MARK: CameraFeedManagerDelegate Methods
@@ -345,5 +348,7 @@ extension PreviewViewController {
     bottomSheetViewBottomSpace.constant = bottomSpace
     view.setNeedsLayout()
   }
+    
+    
 
 }

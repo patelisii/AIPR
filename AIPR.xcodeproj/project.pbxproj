@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B124DC425EEF66F002A118D /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B124DC325EEF66F002A118D /* GameController.framework */; };
-		2B124DD025EEFC99002A118D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B124DCF25EEFC99002A118D /* ResultsViewController.swift */; };
 		2B1D97D82609907800781594 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1D97D72609907800781594 /* LoginViewController.swift */; };
-		2B4E4C792607F37C00BD1D6C /* mobilenet_quant_v1_224.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E4C772607F37C00BD1D6C /* mobilenet_quant_v1_224.tflite */; };
-		2B4E4C7A2607F37C00BD1D6C /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B4E4C782607F37C00BD1D6C /* labels.txt */; };
+		2B4DF66B260E4D8C00FB5AD3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DF66A260E4D8C00FB5AD3 /* ResultsViewController.swift */; };
 		2B4E4C832607F3CE00BD1D6C /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E4C822607F3CE00BD1D6C /* PreviewView.swift */; };
 		2B4E4C8B2607F41200BD1D6C /* CameraFeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E4C8A2607F41200BD1D6C /* CameraFeedManager.swift */; };
 		2B4E4C912607F6EF00BD1D6C /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4E4C902607F6EF00BD1D6C /* ModelDataHandler.swift */; };
@@ -25,6 +23,8 @@
 		2B81A7DD25FEBB98001D4F03 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81A7DC25FEBB98001D4F03 /* MenuTableViewController.swift */; };
 		2B81A7E525FEEB69001D4F03 /* LocalStandardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81A7E425FEEB69001D4F03 /* LocalStandardsViewController.swift */; };
 		2B81A7EA25FEEBC1001D4F03 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B81A7E925FEEBC1001D4F03 /* InfoTableViewCell.swift */; };
+		2B9E1623260FB21D00AA506E /* model_prototype.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E1621260FB21D00AA506E /* model_prototype.tflite */; };
+		2B9E1624260FB21D00AA506E /* labels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2B9E1622260FB21D00AA506E /* labels.txt */; };
 		2BA0C9C325EC903B00439775 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0C9C225EC903B00439775 /* HomeViewController.swift */; };
 		2BA0C9C825EC90EA00439775 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA0C9C725EC90EA00439775 /* PostTableViewCell.swift */; };
 		2BBD19D025DDCCE30054FAA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD19CF25DDCCE30054FAA8 /* AppDelegate.swift */; };
@@ -61,10 +61,8 @@
 		2460155AE65CCD9970F58E53 /* Pods-AIPR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIPR.release.xcconfig"; path = "Target Support Files/Pods-AIPR/Pods-AIPR.release.xcconfig"; sourceTree = "<group>"; };
 		2B124DC325EEF66F002A118D /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		2B124DC525EEF68A002A118D /* AIPR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AIPR.entitlements; sourceTree = "<group>"; };
-		2B124DCF25EEFC99002A118D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B1D97D72609907800781594 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		2B4E4C772607F37C00BD1D6C /* mobilenet_quant_v1_224.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobilenet_quant_v1_224.tflite; sourceTree = "<group>"; };
-		2B4E4C782607F37C00BD1D6C /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
+		2B4DF66A260E4D8C00FB5AD3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		2B4E4C822607F3CE00BD1D6C /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		2B4E4C8A2607F41200BD1D6C /* CameraFeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFeedManager.swift; sourceTree = "<group>"; };
 		2B4E4C902607F6EF00BD1D6C /* ModelDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataHandler.swift; sourceTree = "<group>"; };
@@ -78,6 +76,8 @@
 		2B81A7DC25FEBB98001D4F03 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		2B81A7E425FEEB69001D4F03 /* LocalStandardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStandardsViewController.swift; sourceTree = "<group>"; };
 		2B81A7E925FEEBC1001D4F03 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		2B9E1621260FB21D00AA506E /* model_prototype.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_prototype.tflite; sourceTree = "<group>"; };
+		2B9E1622260FB21D00AA506E /* labels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labels.txt; sourceTree = "<group>"; };
 		2BA0C9C225EC903B00439775 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2BA0C9C725EC90EA00439775 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		2BBD19CC25DDCCE30054FAA8 /* AIPR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIPR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				2BA0C9C225EC903B00439775 /* HomeViewController.swift */,
-				2B124DCF25EEFC99002A118D /* ResultsViewController.swift */,
 				2B81A7DC25FEBB98001D4F03 /* MenuTableViewController.swift */,
 				2B81A7E425FEEB69001D4F03 /* LocalStandardsViewController.swift */,
 				2B4E4C9D2607FA1D00BD1D6C /* PreviewViewController.swift */,
@@ -154,6 +153,7 @@
 				2B1D97D72609907800781594 /* LoginViewController.swift */,
 				2B5FBAB926099A210063F2FC /* ProfileViewController.swift */,
 				2B5FBABE26099ABE0063F2FC /* CreateViewController.swift */,
+				2B4DF66A260E4D8C00FB5AD3 /* ResultsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,16 +167,6 @@
 			);
 			path = CellControllers;
 			sourceTree = "<group>";
-		};
-		2B4E4C762607F37C00BD1D6C /* Model copy */ = {
-			isa = PBXGroup;
-			children = (
-				2B4E4C772607F37C00BD1D6C /* mobilenet_quant_v1_224.tflite */,
-				2B4E4C782607F37C00BD1D6C /* labels.txt */,
-			);
-			name = "Model copy";
-			path = "AIPR/Model copy";
-			sourceTree = SOURCE_ROOT;
 		};
 		2B4E4C812607F3B500BD1D6C /* CameraFeed */ = {
 			isa = PBXGroup;
@@ -204,6 +194,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2B9E1620260FB21D00AA506E /* model_prototype */ = {
+			isa = PBXGroup;
+			children = (
+				2B9E1621260FB21D00AA506E /* model_prototype.tflite */,
+				2B9E1622260FB21D00AA506E /* labels.txt */,
+			);
+			name = model_prototype;
+			path = ../../../../Desktop/model_prototype;
+			sourceTree = "<group>";
+		};
 		2BBD19C325DDCCE30054FAA8 = {
 			isa = PBXGroup;
 			children = (
@@ -229,12 +229,12 @@
 		2BBD19CE25DDCCE30054FAA8 /* AIPR */ = {
 			isa = PBXGroup;
 			children = (
+				2B9E1620260FB21D00AA506E /* model_prototype */,
 				2B4E4CAC2607FD3E00BD1D6C /* Views */,
 				2B4E4C8F2607F6DA00BD1D6C /* ModelDataHandler */,
 				2B4E4C812607F3B500BD1D6C /* CameraFeed */,
 				2B4E4C062607EDB200BD1D6C /* CellControllers */,
 				2B4E4C022607ED7200BD1D6C /* ViewControllers */,
-				2B4E4C762607F37C00BD1D6C /* Model copy */,
 				2BBD19CF25DDCCE30054FAA8 /* AppDelegate.swift */,
 				2BBD19D125DDCCE30054FAA8 /* SceneDelegate.swift */,
 				2BBD19D525DDCCE30054FAA8 /* Main.storyboard */,
@@ -387,9 +387,9 @@
 			files = (
 				2BBD19DC25DDCCE40054FAA8 /* LaunchScreen.storyboard in Resources */,
 				2BBD19D925DDCCE40054FAA8 /* Assets.xcassets in Resources */,
-				2B4E4C7A2607F37C00BD1D6C /* labels.txt in Resources */,
+				2B9E1624260FB21D00AA506E /* labels.txt in Resources */,
+				2B9E1623260FB21D00AA506E /* model_prototype.tflite in Resources */,
 				2BBD19D725DDCCE30054FAA8 /* Main.storyboard in Resources */,
-				2B4E4C792607F37C00BD1D6C /* mobilenet_quant_v1_224.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +519,7 @@
 			files = (
 				2B4E4CA32607FB0000BD1D6C /* InferenceViewController.swift in Sources */,
 				2B81A7DD25FEBB98001D4F03 /* MenuTableViewController.swift in Sources */,
+				2B4DF66B260E4D8C00FB5AD3 /* ResultsViewController.swift in Sources */,
 				2B4E4C912607F6EF00BD1D6C /* ModelDataHandler.swift in Sources */,
 				2BBD19D025DDCCE30054FAA8 /* AppDelegate.swift in Sources */,
 				2B4E4C8B2607F41200BD1D6C /* CameraFeedManager.swift in Sources */,
@@ -530,7 +531,6 @@
 				2BA0C9C825EC90EA00439775 /* PostTableViewCell.swift in Sources */,
 				2BBD19D225DDCCE30054FAA8 /* SceneDelegate.swift in Sources */,
 				2BA0C9C325EC903B00439775 /* HomeViewController.swift in Sources */,
-				2B124DD025EEFC99002A118D /* ResultsViewController.swift in Sources */,
 				2B4E4C9E2607FA1D00BD1D6C /* PreviewViewController.swift in Sources */,
 				2B1D97D82609907800781594 /* LoginViewController.swift in Sources */,
 				2B81A7E525FEEB69001D4F03 /* LocalStandardsViewController.swift in Sources */,

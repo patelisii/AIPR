@@ -34,9 +34,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 150
         
-        let menu = MenuTableViewController(with: ["Profile",
-                                                  "Home",
-                                                  "Local Standards"])
+        let menu = MenuTableViewController(with: ["Home",
+                                                  "Settings"
+                                                  ])
         menu.delegate = self
         sideMenu = SideMenuNavigationController(rootViewController: menu)
         sideMenu?.leftSide = true
@@ -45,11 +45,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        addChildControllers()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        refreshData()
+    }
+    
     
     @objc func refreshData(){
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = 30
         
         query.findObjectsInBackground{ (posts, error) in
             if posts != nil{
@@ -83,16 +87,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func didSelectMenuItem(named: String) {
         sideMenu?.dismiss(animated: true, completion: { [self] in
             
-            self.title = named
+//            self.title = named
             
             if named == "Home"{
                 self.view.isHidden = false
-                localStandardsController.view.isHidden = true
-            }
-            else if named == "Local Standards"{
-//                self.view.isHidden = true
-//                self.localStandardsController.view.isHidden = false
-                performSegue(withIdentifier: "showInfo", sender: self.sideMenu)
+//                localStandardsController.view.isHidden = true
             }
         })
     }
@@ -110,7 +109,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let item = post["item"] as! String
         let conf = post["confidence"] as! String
         cell.postLabel.text = name + " recycled " + item + " with a confidence of " + conf
-        cell.proPicImageView.image = UIImage(named: "plastics")
+        let imageLabel = post["image_label"] as! String
+        cell.proPicImageView.image = UIImage(named: imageLabel)
 //        let proPic = post["profile_picture"] as! String
 //        print(type(of: proPic))
 //        if proPic != nil{
@@ -118,6 +118,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        }
         return cell
     }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -171,9 +173,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "showResults"{
-            var resultsViewController = ResultsViewController()
-            resultsViewController = segue.destination as! ResultsViewController
-            resultsViewController.pic = self.picture as! UIImage
+//            var resultsViewController = ResultsViewController()
+//            resultsViewController = segue.destination as! ResultsViewController
+//            resultsViewController.pic = self.picture as! UIImage
         }
         else if segue.identifier == "showInfo"{
             var infoViewController = LocalStandardsViewController()
